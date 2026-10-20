@@ -59,24 +59,27 @@ explanations, a context comparison, and a downloadable PDF report.
 - Python unittest
 
 ## 🏗️ System Architecture
-
 ```mermaid
 flowchart TD
     A["User Input"] --> B["Sensitive Data Detector"]
     B --> C["Context Evaluation Engine"]
-    C --> D{"Privacy Decision"}
+    C --> D["Privacy Decision"]
+
     D --> E["ALLOW"]
     D --> F["REVIEW"]
     D --> G["BLOCK"]
+
     E --> H["Redaction and Protected Text"]
     F --> H
     G --> I["High-Risk Warning"]
+
     H --> J["Streamlit Dashboard"]
+    I --> J
+
     J --> K["PDF Privacy Report"]
     J --> L["Context Comparison"]
     J --> M["Privacy Audit History"]
 ```
-
 ## 📁 Project Structure
 
 ContextAwareAI/
